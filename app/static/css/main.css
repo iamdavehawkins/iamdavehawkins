@@ -4,7 +4,39 @@
    Author's custom styles
    ========================================================================== */
 
+/* title font */
+h1 a{
+    color: black;
+}
 
+/* hover over title */
+h1 a:hover {
+    color: black;
+}
+
+/* space around headshot */
+div.row #headshot{
+    padding: 20px;
+}
+
+/* navbar centering (NOTE: nest for .LESS) */
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-nav li {
+    float: none;
+    display: inline-block;
+}
+
+.navbar-nav li a {
+    color: black;
+}
+
+.navbar-nav li.active {
+    text-decoration: underline;
+}
 
 
 
