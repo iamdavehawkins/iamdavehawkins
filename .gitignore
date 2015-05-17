@@ -2,3 +2,13 @@
 *.pyc
 
 flask/
+
+.idea/
+
+*.ipynb
+
+instance/
+
+instance/config.py
+
+*.db
