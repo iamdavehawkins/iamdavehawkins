@@ -1,54 +1,37 @@
-
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
+/* CSS crunched with Crunch - http://crunchapp.net/ */
 /* title font */
-h1 a{
-    color: black;
+h1 a {
+  color: black;
+  font-family: 'Droid Serif', sans-serif;
+  font-weight: 700;
 }
-
+/* paragraph fonts */
+p {
+  font-family: 'Droid Serif';
+  text-align: center;
+}
 /* hover over title */
 h1 a:hover {
-    color: black;
+  color: black;
 }
-
 /* space around headshot */
-div.row #headshot{
-    padding: 20px;
+div.row #headshot {
+  margin: 1em;
 }
-
-/* navbar centering (NOTE: nest for .LESS) */
+/* navbar centering and coloring */
 .navbar-nav {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
-
 .navbar-nav li {
-    float: none;
-    display: inline-block;
+  float: none;
+  display: inline-block;
 }
-
 .navbar-nav li a {
-    color: black;
+  color: black;
+  font-size: 125%;
+  font-family: 'Droid Serif', sans-serif;
 }
-
 .navbar-nav li.active {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
