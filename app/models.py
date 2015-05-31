@@ -16,11 +16,7 @@ class Bike(db.Model):
 	img_path = db.Column(db.String())
 	retired = db.Column(db.Integer)
 
-	parts = db.relationship("Part")
-
-	# def __init__(self, name, weight):
-	#     self.name = name
-	#     self.weight = weight
+	parts = db.relationship('MyPart')
 
 	def __repr__(self):
 		return '<Bike {}>'.format(self.name)
@@ -38,24 +34,20 @@ class PartType(db.Model):
 	min_per_bike = db.Column(db.Integer)
 	max_per_bike = db.Column(db.Integer)
 
-	in_stock = db.relationship("Part")
-
-	# def __init__(self, name, max_per_bike):
-	# 	self.name = name
-	# 	self.max_per_bike = max_per_bike
+	my_parts = db.relationship('MyPart')
 
 	def __repr__(self):
 		return '<PartType {}, Max: {}>'.format(self.name, self.max_per_bike)
 
 
-class Part(db.Model):
+class MyPart(db.Model):
 	'''
 	These are the parts that I actually have at home
 	as well as which bike (or none) they are currently
 	installed on.
 	'''
 
-	__tablename__ = 'parts'
+	__tablename__ = 'myparts'
 	id = db.Column(db.Integer, primary_key=True)
 	brand = db.Column(db.String())
 	name = db.Column(db.String())
@@ -65,9 +57,8 @@ class Part(db.Model):
 	img_path = db.Column(db.String())
 	retired = db.Column(db.Integer)
 
-	parttype_id = db.Column(db.Integer, db.ForeignKey('parttypes.id'))
-
 	bike_id = db.Column(db.Integer, db.ForeignKey('bikes.id'))
+	parttype_id = db.Column(db.Integer, db.ForeignKey('parttypes.id'))
 
 	def __repr__(self):
 		return '<Part {} {} is a {} installed on {}>'.format(
