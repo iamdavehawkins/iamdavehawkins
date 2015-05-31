@@ -11,7 +11,9 @@ h1 a{
 p {
     font-family: @googfontmenu;
     text-align: center;
-    text-justify: inter-word;
+    &.basic-info {
+        text-align: left;
+    }
 }
 
 /* hover over title */
@@ -39,5 +41,10 @@ div.row #headshot{
     }
     li.active {
         text-decoration: underline;
+    }
+    ul.dropdown-menu li a:hover {
+        display: block;
+        text-decoration: underline;
+        background: none;
     }
 }

@@ -16,9 +16,13 @@ def about():
 def projects():
     return render_template('projects.html')
 
-@app.route('/resume')
-def resume():
+@app.route('/resume/pdf')
+def resume_pdf():
     return render_template('resume.html')
+
+@app.route('/resume/html')
+def resume_html():
+	return render_template('resume.html')
 
 @app.route('/bikes')
 def bikes():

@@ -36,20 +36,42 @@
     <h1 class="text-center"><a href="/">Dave Hawkins</a></h1>
 
     {% set nav_bar = [
-        ('/home', 'home', 'Home'),
-        ('/about', 'about', 'About'),
-        ('/projects', 'projects', 'Projects'),
-        ('/bikes', 'bikes', 'Bikes'),
-        ('/resume', 'resume', 'Resumé')
+        ('/about', 'about', 'About', None),
+        ('/projects', 'projects', 'Projects', None),
+        ('/music', 'music', 'Music', [('The Finer Things', '/thefinerthings'), ('Weddings', '/weddings')]),
+        ('/bikes', 'bikes', 'Bikes', None),
+        ('/resume', 'resume', 'Resumé', [('PDF', '/pdf'), ('HTML', '/html')])
     ] -%}
 
     {% set active_page = active_page|default('index') -%}
 
     <nav class="navbar" role="navigation">
         <ul class="nav navbar-nav">
-            {% for href, id, caption in nav_bar %}
-            <li{% if id == active_page %} class="active"{% endif%}>
-            <a href="{{ href|e }}">{{ caption|e }}</a></li>
+            {% for href, id, caption, subs in nav_bar %}
+
+                {% if not subs %}
+                    <li {% if id == active_page %} class="active" {%endif%}>
+                    <a href="{{ href|e }}">{{ caption|e }}</a></li>
+
+                {% elif subs %}
+                    <li {% if id == active_page %} class="active dropdown" 
+                        {% else %} class="dropdown"
+                        {% endif %}>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="{{ href|e }}">
+                        {{ caption|e }}
+                        <b class="caret"></b>
+                    </a>
+                        <ul class="dropdown-menu">
+                            {% for name, subref in subs %}
+                                <li><a href="{{ href|e }}{{ subref|e }}">
+                                    {{ name|e }}
+                                </a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endif %}
+
+
             {% endfor %}
         </ul>
     </nav>
@@ -60,7 +82,7 @@
 
     <hr>
     <footer>
-        <p>&copy; David Hawkins 2015</p>
+        <p>&copy; 2015 David Hawkins. Powered by <a href="http://flask.pocoo.org">Flask.</a></p>
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

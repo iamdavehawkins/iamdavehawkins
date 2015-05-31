@@ -10,6 +10,9 @@ p {
   font-family: 'Droid Serif';
   text-align: center;
 }
+p.basic-info {
+  text-align: left;
+}
 /* hover over title */
 h1 a:hover {
   color: black;
@@ -34,4 +37,9 @@ div.row #headshot {
 }
 .navbar-nav li.active {
   text-decoration: underline;
+}
+.navbar-nav ul.dropdown-menu li a:hover {
+  display: block;
+  text-decoration: underline;
+  background: none;
 }
