@@ -1,3 +1,5 @@
+import os
+
 DEBUG = False
 SQLALCHEMY_ECHO = False
-DATABASE = 'app.db'
+SQLALCHEMY_DATABASE_URI = os.environ('DATABASE_URL')
