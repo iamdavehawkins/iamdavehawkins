@@ -17,5 +17,4 @@ db.session.add(bars)
 
 
 
-
 db.session.commit()

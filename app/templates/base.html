@@ -29,7 +29,7 @@
         <![endif]-->
     <div class="row text-center">
         <a href="/">
-            <img class="img-circle" id="headshot" src="{{ url_for('static', filename='img/tile.png') }}" alt="Dave Hawkins" height="250" width="250">
+            <img class="img-circle" id="headshot" src="{{ url_for('static', filename='img/headshot.png') }}" alt="Dave Hawkins" height="250" width="250">
         </a>
     </div>
 
@@ -37,7 +37,7 @@
 
     {% set nav_bar = [
         ('/about', 'about', 'About', None),
-        ('/projects', 'projects', 'Projects', None),
+        ('/projects', 'projects', 'DIY Projects', [('Bottle Cap Michigan', '/bottlecapmichigan'), ('This Website', '/thiswebsite')]),
         ('/music', 'music', 'Music', [('The Finer Things', '/thefinerthings'), ('Weddings', '/weddings')]),
         ('/bikes', 'bikes', 'Bikes', None),
         ('/resume', 'resume', 'Resumé', [('PDF', '/pdf'), ('HTML', '/html')])
@@ -81,8 +81,8 @@
     {% endblock body %}
 
     <hr>
-    <footer>
-        <p>&copy; 2015 David Hawkins. Powered by <a href="http://flask.pocoo.org">Flask.</a></p>
+    <footer class="footer">
+        <p>&copy; 2015 David Hawkins. Powered by <a href="http://flask.pocoo.org" target="Flask">Flask.</a></p>
     </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
