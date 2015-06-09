@@ -8,14 +8,12 @@ h1 a {
 /* paragraph fonts */
 p {
   font-family: 'Droid Serif';
-  text-align: center;
-}
-p.basic-info {
   text-align: left;
-  margin: 10px 5%;
+  margin-bottom: 15px;
 }
-p.lead {
-  margin: 15px 5% 5px;
+p.center-it {
+  text-align: center;
+  margin: 10px 5%;
 }
 /* hover over title */
 h1 a:hover {
@@ -46,4 +44,12 @@ div.row #headshot {
   display: block;
   text-decoration: underline;
   background: none;
+}
+/* footer centering */
+.footer p {
+  text-align: center;
+}
+/* top buffer for spacing out rows */
+.top-buffer {
+  margin-top: 20px;
 }

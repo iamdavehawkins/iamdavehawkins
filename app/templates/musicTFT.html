@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% set active_page = "music" %}
+
+{% block title %} | Music | The Finer Things{% endblock title %}
+
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-7">
+			<p class="lead">The Finer Things</p>
+			<p> <em>The Finer Things</em> was a band I led from 2009 until 2013. We played monthly around the
+				Ann Arbor music scene at venues like <a href="http://blindpigmusic.com">The Blind Pig</a>,
+				<a href="http://www.a2southu.com/art-fair/">The Ann Arbor Art Fair</a>, Woodruff's Bar and more.
+				We enjoyed a loyal and supportive fan base of family, friends and community members. During our active years
+				we released two albums that are available on iTunes:
+			</p>
+
+			<div class="row">
+			  <div class="col-md-3">
+			  	<img src="{{url_for('static', filename='img/alliseeisblue.png')}}" width=100% alt="All i see is blue album art"></img>
+			  </div>
+			  <div class="col-md-9">
+				<table class="table table-hover">
+			    <thead>
+			      <tr>
+			        <th>Album Name</th>
+			        <th></th>
+			      </tr>
+			    </thead>
+			    <tbody>
+			      <tr>
+			        <td><a href="https://itunes.apple.com/us/album/all-i-see-is-blue/id442959864" target="_blank">All i see is blue</a></td>
+			        <td>2011</td>
+			      </tr>
+			      <tr>
+			        <td><a href="https://itunes.apple.com/us/album/the-finer-things-ep/id579933986" target="_blank">The Finer Things EP</td>
+			        <td>2012</td>
+			      </tr>
+			    </tbody>
+			  	</table>
+			  </div>
+			</div>
+			<!-- Add a column with the direct embed to itune html? -->
+
+			<p class="top-buffer"> Although whenever people ask to hear what my band sounds like, this is always the first song I point them to:
+			</p>
+			<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2504554825/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=793204586/transparent=true/" seamless><a href="http://thefinerthings.bandcamp.com/album/tft-ep">TFT EP by The Finer Things</a></iframe>
+		</div>
+
+		<div class="col-md-5">
+			<img src="{{url_for('static', filename='img/tftlogo.jpg')}}" width=100% alt="The Finer Things Logo"></img>
+		</div>
+	</div>
+	<div class="row top-buffer">
+	  <div class="col-md-3">
+	  	<img src="{{url_for('static', filename='img/thefinerthings_taste.jpg')}}" width=100%></img>
+	  </div>
+	  <div class="col-md-6">
+	  	<img src="{{url_for('static', filename='img/thefinerthings_brass.jpg')}}" width=100%></img>
+	  </div>
+	  <div class="col-md-3">
+	  	<img src="{{url_for('static', filename='img/thefinerthings_piano.jpg')}}" width=100%></img>
+	  </div>
+	</div>
+</div>
+
+<!-- can add info of sound engineering mixing process logo design brand song writing booking total management etc -->
+
+{% endblock body %}

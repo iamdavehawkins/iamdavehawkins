@@ -24,7 +24,7 @@ def music_weddings():
 
 @app.route('/music/thefinerthings')
 def music_tft():
-	return render_template('comingsoon.html')
+	return render_template('musicTFT.html')
 
 @app.route('/bikes')
 def bikes():
@@ -32,7 +32,7 @@ def bikes():
 
 @app.route('/resume/pdf')
 def resume_pdf():
-    return render_template('resume.html')
+    return render_template('resumepdf.html')
 
 @app.route('/resume/html')
 def resume_html():
