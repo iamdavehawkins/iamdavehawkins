@@ -36,6 +36,11 @@ class PartType(db.Model):
 
 	my_parts = db.relationship('MyPart')
 
+	def __init__(self, name, min_per_bike=1, max_per_bike=1):
+		self.name = name
+		self.min_per_bike = min_per_bike
+		self.max_per_bike = max_per_bike
+
 	def __repr__(self):
 		return '<PartType {}, Max: {}>'.format(self.name, self.max_per_bike)
 
