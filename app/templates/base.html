@@ -37,46 +37,58 @@
 
     {% set nav_bar = [
         ('/about', 'about', 'About', None),
-        ('/projects', 'projects', 'DIY Projects', [('Bottle Cap Michigan', '/bottlecapmichigan'), ('This Website', '/thiswebsite')]),
+        ('/connect', 'connect', 'Connect', None),
+        ('/projects', 'projects', 'Projects', [('Bottle Cap Michigan', '/bottlecapmichigan'), ('This Website', '/thiswebsite')]),
         ('/music', 'music', 'Music', [('The Finer Things', '/thefinerthings'), ('Weddings', '/weddings')]),
         ('/bikes', 'bikes', 'Bikes', None),
         ('/resume', 'resume', 'Resumé', [('PDF', '/pdf'), ('HTML', '/html')])
     ] -%}
 
     {% set active_page = active_page|default('index') -%}
-    <nav class="navbar" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse-me">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!-- I wish I knew a better way to center this without throwing off the mobile version -->
         <div class="container">
             <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-            <ul class="nav navbar-nav">
-                {% for href, id, caption, subs in nav_bar %}
+              <div class="col-sm-12 col-md-offset-3">
+                <div class="collapse navbar-collapse" id="collapse-me">
+                    <ul class="nav navbar-nav">
+                        {% for href, id, caption, subs in nav_bar %}
 
-                    {% if not subs %}
-                        <li {% if id == active_page %} class="active" {%endif%}>
-                        <a href="{{ href|e }}">{{ caption|e }}</a></li>
+                            {% if not subs %}
+                                <li {% if id == active_page %} class="active" {%endif%}>
+                                <a href="{{ href|e }}">{{ caption|e }}</a></li>
 
-                    {% elif subs %}
-                        <li {% if id == active_page %} class="active dropdown" 
-                            {% else %} class="dropdown"
-                            {% endif %}>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="{{ href|e }}">
-                            {{ caption|e }}
-                            <b class="caret"></b>
-                        </a>
-                            <ul class="dropdown-menu">
-                                {% for name, subref in subs %}
-                                    <li><a href="{{ href|e }}{{ subref|e }}">
-                                        {{ name|e }}
-                                    </a></li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    {% endif %}
+                            {% elif subs %}
+                                <li {% if id == active_page %} class="dropdown" 
+                                    {% else %} class="dropdown"
+                                    {% endif %}>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="{{ href|e }}">
+                                    {{ caption|e }}
+                                    <b class="caret"></b>
+                                </a>
+                                    <ul class="dropdown-menu">
+                                        {% for name, subref in subs %}
+                                            <li><a href="{{ href|e }}{{ subref|e }}">
+                                                {{ name|e }}
+                                            </a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endif %}
 
 
-                {% endfor %}
-            </ul>
-            </div>
+                        {% endfor %}
+                    </ul>
+                </div>
+              </div>
             </div>
         </div>
     </nav>

@@ -23,6 +23,12 @@ h1 a:hover {
 div.row #headshot {
   margin: 1em;
 }
+/* remove default bootstrap navbar styling */
+.navbar-default {
+  border: none;
+  background: none;
+  box-shadow: none;
+}
 /* navbar centering and coloring */
 .navbar-nav {
   width: 100%;
