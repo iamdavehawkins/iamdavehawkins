@@ -26,11 +26,9 @@ div.row #headshot {
 /* navbar centering and coloring */
 .navbar-nav {
   width: 100%;
-  text-align: center;
 }
 .navbar-nav li {
-  float: none;
-  display: inline-block;
+  text-align: center;
 }
 .navbar-nav li a {
   color: black;
