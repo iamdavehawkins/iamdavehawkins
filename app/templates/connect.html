@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% set active_page = "connect" %}
+
+{% block title %} | Connect{% endblock title %}
+
+{% block body %}
+<div class="container">
+  <h3>Connect with me</h3>
+  <div class="row">
+  	<div class="col-md-12">
+	  	<p class="basic-info">
+	  	  Email: <a href="mailto:iamdavehawkins@gmail.com" target="_top">iamdavehawkins@gmail.com</a>
+	    </p>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+  	<div class="col-md-4">
+  	  <p class="lead basic-info">
+  	  	LinkedIn
+  	  </p>
+  	  <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+	  <script type="IN/MemberProfile" data-id="https://www.linkedin.com/in/iamdavehawkins" data-format="inline" data-related="false"></script>
+  	</div>
+  	<div class="col-md-4">
+  	  <p class="lead basic-info">
+  	  	Strava
+  	  </p>
+	  <iframe height='160' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://app.strava.com/athletes/1024596/activity-summary/e102df23c735650a47c48fcc43d05c1c707b7d8c'></iframe>
+  	</div>
+  	<div class="col-md-4">
+  	  <p class="lead basic-info">
+  	  	Facebook
+  	  </p>
+	  <a href="https://www.facebook.com/iamdavehawkins" title="Dave Hawkins" target="_TOP">
+	  	<img class="img-responsive" src="https://badge.facebook.com/badge/2233293.4642.1011033919.png" alt="" />
+	  </a>
+  	</div>
+  </div>
+  <div class="row">
+  	<div class="col-md-4">
+  	  <p class="lead basic-info">
+  	  	AthLinks
+  	  </p>
+  	  <a href="http://www.athlinks.com/athletes/193797996">
+  	  	<img src="https://upload.wikimedia.org/wikipedia/en/9/93/Athlinks.png" alt="Athlinks" title="Athlinks" />
+  	  </a>
+  	</div>
+  </div>
+</div>
+
+{% endblock body %}

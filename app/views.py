@@ -9,6 +9,10 @@ from app.models import Bike
 def about():
     return render_template('about.html')
 
+@app.route('/connect')
+def connect():
+	return render_template('connect.html')
+
 @app.route('/projects/bottlecapmichigan')
 def projects_bottlecapmichigan():
     return render_template('projectsbottlecap.html')
@@ -20,7 +24,6 @@ def projects_thiswebsite():
 @app.route('/music/weddings')
 def music_weddings():
 	return render_template('comingsoon.html')
-
 
 @app.route('/music/thefinerthings')
 def music_tft():
