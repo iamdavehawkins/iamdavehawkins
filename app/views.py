@@ -11,11 +11,11 @@ def about():
 
 @app.route('/projects/bottlecapmichigan')
 def projects_bottlecapmichigan():
-    return render_template('comingsoon.html')
+    return render_template('projectsbottlecap.html')
 
 @app.route('/projects/thiswebsite')
 def projects_thiswebsite():
-    return render_template('comingsoon.html')
+    return render_template('projectsthissite.html')
 
 @app.route('/music/weddings')
 def music_weddings():

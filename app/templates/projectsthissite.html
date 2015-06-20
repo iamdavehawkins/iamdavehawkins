@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% set active_page = "projects" %}
+
+{% block title %} | Projects | This site{% endblock title %}
+
+{% block body %}
+<div class="container">
+  <div class="row">
+  	<div class="col-md-8 col-md-offset-2">
+		<p> This is a mostly static site built using the Python Flask framework. It's hosted at <a href="https://github.com/iamdavehawkins/iamdavehawkins">Github</a>
+		if you'd like to check out the source code. Besides <a href="https://www.roberthawkinsmusic.com" target="_blank">an extremely simple site</a> I built for my dad, it's my first real web
+		application so I am totally open to any suggestions and/or criticism. I made it primarily as a place for me to experiment and learn some basic web development. </p>
+    </div>
+  </div>
+  <div class="row">
+  	<div class="col-md-4">
+  		<a href="https://www.python.org" target="_blank">
+  		<img class="img-responsive" src="https://www.python.org/static/community_logos/python-logo-master-v3-TM.png" alt="Python logo" title="Python"/>
+  		</a>
+  	</div>
+  	<div class="col-md-4">
+  		<a href="http://flask.pocoo.org" target="_blank">
+  		<img class="img-responsive" src="http://flask.pocoo.org/static/logo/flask.png" alt="Flask logo" title="Flask"/>
+  	    </a>
+  	</div>
+  	<div class="col-md-4">
+  		<a href="https://github.com/" target="_blank">
+  		<img class="img-responsive" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png" alt="Github Octocat" title="Github"/>
+  	    </a>
+  	</div>
+  </div>
+</div>
+{% endblock body %}
