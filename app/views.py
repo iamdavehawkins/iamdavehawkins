@@ -39,7 +39,7 @@ def resume_pdf():
 
 @app.route('/resume/html')
 def resume_html():
-	return render_template('resume.html')
+	return render_template('resumehtml.html')
 
 @app.errorhandler(404)
 def page_not_found(e):
