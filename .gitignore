@@ -12,3 +12,5 @@ instance/
 instance/config.py
 
 *.db
+
+app/config.py
